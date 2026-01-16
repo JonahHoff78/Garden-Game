@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://j0k43tdpd4y1"]
+[gd_scene load_steps=8 format=3 uid="uid://j0k43tdpd4y1"]
 
 [ext_resource type="Texture2D" uid="uid://chchx8ts4xp4b" path="res://assets/TileSheet/tileset.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c87se1pd85vxv" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://4xwnu7s1emj5" path="res://main.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cd6sub3gxrwyb" path="res://assets/others/grid_selector.png" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://vla1xnboh58m" path="res://flowers/sunflower.tscn" id="5_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -497,3 +498,6 @@ limit_top = 32
 limit_right = 950
 limit_bottom = 468
 position_smoothing_enabled = true
+
+[node name="sunflower" parent="." instance=ExtResource("5_lquwl")]
+position = Vector2(290, 234)
