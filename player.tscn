@@ -7,6 +7,8 @@
 [sub_resource type="GDScript" id="GDScript_i3pqv"]
 script/source = "extends CharacterBody2D
 
+signal plantSeed
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 @export var move_speed: float = 70.0
@@ -37,6 +39,9 @@ func _process(delta):
 		direction = Vector2.DOWN
 	else:
 		animated_sprite_2d.stop()
+	
+	if Input.is_action_just_pressed(\"plantSeed\"):
+		emit_signal(\"plantSeed\")
 	
 	
 	velocity = direction * move_speed
