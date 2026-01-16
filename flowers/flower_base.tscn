@@ -1,14 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhbwolfj0lsos"]
+[gd_scene load_steps=3 format=3 uid="uid://bhbwolfj0lsos"]
 
 [ext_resource type="Script" uid="uid://dj5d25eudq4lb" path="res://flowers/flower_base.gd" id="1_02wiy"]
 
-[sub_resource type="Animation" id="Animation_02wiy"]
-resource_name = "0"
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_02wiy"]
-_data = {
-&"0": SubResource("Animation_02wiy")
-}
 
 [node name="flowerBase" type="Node2D"]
 script = ExtResource("1_02wiy")
