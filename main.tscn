@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://j0k43tdpd4y1"]
+[gd_scene load_steps=10 format=3 uid="uid://j0k43tdpd4y1"]
 
 [ext_resource type="Texture2D" uid="uid://chchx8ts4xp4b" path="res://assets/TileSheet/tileset.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c87se1pd85vxv" path="res://player.tscn" id="2_0xm2m"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cd6sub3gxrwyb" path="res://assets/others/grid_selector.png" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://vla1xnboh58m" path="res://flowers/varieties/sunflower.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dycxcxhugoe3d" path="res://flowers/varieties/rose.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://d1wdp4hj4goxn" path="res://flowers/varieties/tulip.tscn" id="7_272bh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -505,3 +506,6 @@ position = Vector2(297, 233)
 
 [node name="rose" parent="." instance=ExtResource("6_7mycd")]
 position = Vector2(240, 257)
+
+[node name="tulip" parent="." instance=ExtResource("7_272bh")]
+position = Vector2(274, 282)
