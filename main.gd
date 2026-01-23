@@ -1,7 +1,7 @@
 extends TileMap
 
-@onready var player: CharacterBody2D = $Player
-@onready var grid_helper: Sprite2D = $GridHelper
+@onready var player: CharacterBody2D = $World/Player
+@onready var grid_helper: Sprite2D = $World/GridHelper
 
 var currentSeed = preload("res://flowers/varieties/daisy.tscn")
 
@@ -25,6 +25,6 @@ func _on_player_plant_seed():
 		
 func plant_seed(coord) -> void:
 	var plant = currentSeed.instantiate()
-	add_child(plant)
+	get_node("World/Flowers").add_child(plant)
 	plant.global_position = map_to_local(coord)
 		
