@@ -4,6 +4,7 @@ extends TileMap
 @onready var grid_helper: Sprite2D = $World/GridHelper
 
 var currentSeed = preload("res://flowers/varieties/daisy.tscn")
+var plantedFlowers: Dictionary = {}
 
 func _physics_process(_delta):
 	var playerMapCoord = local_to_map(player.global_position)
@@ -21,10 +22,12 @@ func _on_player_plant_seed():
 		return
 	
 	if tile.get_custom_data("garden"):
-		plant_seed(cellLocalCoord)
+		if not plantedFlowers.has(cellLocalCoord):
+			plant_seed(cellLocalCoord)
 		
 func plant_seed(coord) -> void:
 	var plant = currentSeed.instantiate()
 	get_node("World/Flowers").add_child(plant)
+	plantedFlowers[coord] = plant
 	plant.global_position = map_to_local(coord)
 		
