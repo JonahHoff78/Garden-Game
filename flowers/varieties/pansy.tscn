@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1wdp4hj4goxn"]
+[gd_scene load_steps=9 format=3 uid="uid://cr8v40njipm3n"]
 
-[ext_resource type="PackedScene" uid="uid://bhbwolfj0lsos" path="res://flowers/flower_base.tscn" id="1_xxqug"]
-[ext_resource type="Texture2D" uid="uid://l36081rbdc35" path="res://assets/flowers/objects.png" id="2_w2p7r"]
+[ext_resource type="PackedScene" uid="uid://bhbwolfj0lsos" path="res://flowers/flower_base.tscn" id="1_8faue"]
+[ext_resource type="Texture2D" uid="uid://l36081rbdc35" path="res://assets/flowers/objects.png" id="2_vq5i7"]
 
-[sub_resource type="Animation" id="Animation_ms0cc"]
+[sub_resource type="Animation" id="Animation_dyke1"]
 resource_name = "0"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -15,7 +15,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Rect2(16, 32, 16, 16)]
+"values": [Rect2(64, 32, 16, 16)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -44,7 +44,7 @@ tracks/2/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_xxqug"]
+[sub_resource type="Animation" id="Animation_2m6tb"]
 resource_name = "1"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -56,7 +56,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Rect2(16, 48, 16, 16)]
+"values": [Rect2(64, 48, 16, 16)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -80,92 +80,12 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": [3.0],
+"args": [5.0],
 "method": &"start"
 }]
 }
 
-[sub_resource type="Animation" id="Animation_msrv1"]
-resource_name = "2"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Rect2(16, 72, 16, 24)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -9)]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Timer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [4.0],
-"method": &"start"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_hmyos"]
-resource_name = "3"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Rect2(16, 104, 16, 24)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -9)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:harvest_ready")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_w2p7r"]
+[sub_resource type="Animation" id="Animation_46xs1"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -177,7 +97,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Rect2(16, 48, 16, 16)]
+"values": [Rect2(64, 48, 16, 16)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -204,24 +124,104 @@ tracks/2/keys = {
 "values": [false]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_msrv1"]
-_data = {
-&"0": SubResource("Animation_ms0cc"),
-&"1": SubResource("Animation_xxqug"),
-&"2": SubResource("Animation_msrv1"),
-&"3": SubResource("Animation_hmyos"),
-&"RESET": SubResource("Animation_w2p7r")
+[sub_resource type="Animation" id="Animation_nwpo0"]
+resource_name = "2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(64, 72, 16, 24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -9)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Timer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [2.0],
+"method": &"start"
+}]
 }
 
-[node name="tulip" instance=ExtResource("1_xxqug")]
+[sub_resource type="Animation" id="Animation_xt0vu"]
+resource_name = "3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(64, 104, 16, 24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -9)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:harvest_ready")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qpy6b"]
+_data = {
+&"0": SubResource("Animation_dyke1"),
+&"1": SubResource("Animation_2m6tb"),
+&"2": SubResource("Animation_nwpo0"),
+&"3": SubResource("Animation_xt0vu"),
+&"RESET": SubResource("Animation_46xs1")
+}
+
+[node name="pansy" instance=ExtResource("1_8faue")]
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, -9)
-texture = ExtResource("2_w2p7r")
+texture = ExtResource("2_vq5i7")
 region_enabled = true
-region_rect = Rect2(16, 48, 16, 16)
+region_rect = Rect2(64, 48, 16, 16)
 
 [node name="AnimationPlayer" parent="." index="2"]
 libraries = {
-&"": SubResource("AnimationLibrary_msrv1")
+&"": SubResource("AnimationLibrary_qpy6b")
 }
