@@ -19,3 +19,12 @@ func _on_player_plant_seed():
 	
 	if tile == null or currentSeed == null:
 		return
+	
+	if tile.get_custom_data("garden"):
+		plant_seed(cellLocalCoord)
+		
+func plant_seed(coord) -> void:
+	var plant = currentSeed.instantiate()
+	add_child(plant)
+	plant.global_position = map_to_local(coord)
+		
