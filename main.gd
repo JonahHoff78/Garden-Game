@@ -24,6 +24,18 @@ func _on_player_plant_seed():
 	if tile.get_custom_data("garden"):
 		if not plantedFlowers.has(cellLocalCoord):
 			plant_seed(cellLocalCoord)
+		elif is_harvestable(cellLocalCoord):
+			harvest_plant(cellLocalCoord)
+			
+func harvest_plant(key) -> void:
+	var plant: Flower = plantedFlowers.get(key)
+	if plant.has_method("harvest"):
+		plant.harvest()
+		
+		
+func is_harvestable(key) -> bool:
+	var data = plantedFlowers.get(key)
+	return data.harvest_ready if data != null else false
 		
 func plant_seed(coord) -> void:
 	var plant = currentSeed.instantiate()
