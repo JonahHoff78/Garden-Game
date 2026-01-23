@@ -3,7 +3,7 @@ extends TileMap
 @onready var player: CharacterBody2D = $World/Player
 @onready var grid_helper: Sprite2D = $World/GridHelper
 
-var currentSeed = preload("res://flowers/varieties/daisy.tscn")
+var currentSeed = preload("res://flowers/varieties/rose.tscn")
 var plantedFlowers: Dictionary = {}
 
 func _physics_process(_delta):
@@ -31,6 +31,7 @@ func harvest_plant(key) -> void:
 	var plant: Flower = plantedFlowers.get(key)
 	if plant.has_method("harvest"):
 		plant.harvest()
+		plantedFlowers.erase(key)
 		
 		
 func is_harvestable(key) -> bool:
