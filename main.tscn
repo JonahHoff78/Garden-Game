@@ -497,3 +497,5 @@ limit_top = 32
 limit_right = 950
 limit_bottom = 468
 position_smoothing_enabled = true
+
+[connection signal="plantSeed" from="Player" to="." method="_on_player_plant_seed"]
