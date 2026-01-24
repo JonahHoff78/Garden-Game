@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://bodr8jjharny2"]
+
+[ext_resource type="Resource" uid="uid://clrh14cttnhee" path="res://resources/plant_names/tulip.tres" id="1_ldnfy"]
+[ext_resource type="Script" uid="uid://bt6nx1rmg6y1w" path="res://resources/plant_data.gd" id="2_vhvgg"]
+[ext_resource type="Texture2D" uid="uid://ddajm0hc40dka" path="res://assets/seed bags/tulip.png" id="3_bjxmy"]
+
+[resource]
+script = ExtResource("2_vhvgg")
+plantNameResource = ExtResource("1_ldnfy")
+texture = ExtResource("3_bjxmy")
+quantity = 2
+metadata/_custom_type_script = "uid://bt6nx1rmg6y1w"
