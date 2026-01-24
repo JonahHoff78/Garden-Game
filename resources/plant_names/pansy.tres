@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PlantName" load_steps=2 format=3 uid="uid://vonam73sdslt"]
+
+[ext_resource type="Script" uid="uid://dymqrqshlrpop" path="res://resources/plant_name.gd" id="1_w8kvu"]
+
+[resource]
+script = ExtResource("1_w8kvu")
+plantName = "pansy"
+metadata/_custom_type_script = "uid://dymqrqshlrpop"

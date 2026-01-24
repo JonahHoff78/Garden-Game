@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PlantName" load_steps=2 format=3 uid="uid://b5dltq5q2anb3"]
+
+[ext_resource type="Script" uid="uid://dymqrqshlrpop" path="res://resources/plant_name.gd" id="1_an545"]
+
+[resource]
+script = ExtResource("1_an545")
+plantName = "daisy"
+metadata/_custom_type_script = "uid://dymqrqshlrpop"

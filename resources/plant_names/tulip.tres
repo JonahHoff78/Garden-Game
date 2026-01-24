@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PlantName" load_steps=2 format=3 uid="uid://clrh14cttnhee"]
+
+[ext_resource type="Script" uid="uid://dymqrqshlrpop" path="res://resources/plant_name.gd" id="1_8sfr8"]
+
+[resource]
+script = ExtResource("1_8sfr8")
+plantName = "tulip"
+metadata/_custom_type_script = "uid://dymqrqshlrpop"
