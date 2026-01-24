@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SeedResource" load_steps=11 format=3 uid="uid://b2ho7jnngjd5y"]
+
+[ext_resource type="Script" uid="uid://w8jax4mcqdux" path="res://resources/SeedResource.gd" id="1_tjhwj"]
+[ext_resource type="Script" uid="uid://jce81fuespel" path="res://resources/seed_data.gd" id="2_b6unc"]
+[ext_resource type="Resource" uid="uid://cfroin3v8s6h5" path="res://resources/seed_scene_data/bluebell.tres" id="3_xpmql"]
+[ext_resource type="Resource" uid="uid://mvuv4o7qfvuq" path="res://resources/seed_scene_data/daisy.tres" id="4_excrm"]
+[ext_resource type="Resource" uid="uid://cocu1fe63lnl7" path="res://resources/seed_scene_data/iris.tres" id="5_ujyb5"]
+[ext_resource type="Resource" uid="uid://bjxgbjbpqfp8c" path="res://resources/seed_scene_data/lotus.tres" id="6_l0fcw"]
+[ext_resource type="Resource" uid="uid://d3ufrhud0pdr6" path="res://resources/seed_scene_data/pansy.tres" id="7_cs8nr"]
+[ext_resource type="Resource" uid="uid://bf8ijvyjb2ccy" path="res://resources/seed_scene_data/rose.tres" id="8_smend"]
+[ext_resource type="Resource" uid="uid://bvmnp54jwcxh5" path="res://resources/seed_scene_data/sunflower.tres" id="9_3ldj1"]
+[ext_resource type="Resource" uid="uid://bth6umvvqno61" path="res://resources/seed_scene_data/tulip.tres" id="10_pa0wl"]
+
+[resource]
+script = ExtResource("1_tjhwj")
+seedList = Array[ExtResource("2_b6unc")]([ExtResource("3_xpmql"), ExtResource("4_excrm"), ExtResource("5_ujyb5"), ExtResource("6_l0fcw"), ExtResource("7_cs8nr"), ExtResource("8_smend"), ExtResource("9_3ldj1"), ExtResource("10_pa0wl")])
+metadata/_custom_type_script = "uid://w8jax4mcqdux"
