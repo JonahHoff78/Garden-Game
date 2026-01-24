@@ -17,3 +17,13 @@ func add_quantity(value: int) -> void:
 func subtract_quantity() -> void:
 	if seed_left(): plantDataResource.quantity -= 1
 	quantity_changed.emit(plantDataResource.quantity)
+
+
+func get_texture() -> Texture:
+	return plantDataResource.texture
+	
+func get_quantity() -> int:
+	return plantDataResource.quantity
+	
+func get_seed_name() -> String:
+	return plantDataResource.get_plant_name()

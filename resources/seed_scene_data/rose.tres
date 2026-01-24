@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SeedData" load_steps=4 format=3 uid="uid://bf8ijvyjb2ccy"]
+
+[ext_resource type="Resource" uid="uid://dvta0hr5hb2n4" path="res://resources/seed_list/rose.tres" id="1_8rsl5"]
+[ext_resource type="PackedScene" uid="uid://dycxcxhugoe3d" path="res://flowers/varieties/rose.tscn" id="2_0m35l"]
+[ext_resource type="Script" uid="uid://jce81fuespel" path="res://resources/seed_data.gd" id="3_42h4r"]
+
+[resource]
+script = ExtResource("3_42h4r")
+plantDataResource = ExtResource("1_8rsl5")
+plantScene = ExtResource("2_0m35l")
+metadata/_custom_type_script = "uid://jce81fuespel"

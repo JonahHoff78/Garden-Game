@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SeedData" load_steps=4 format=3 uid="uid://cfroin3v8s6h5"]
+
+[ext_resource type="Resource" uid="uid://dopqavct3nmjg" path="res://resources/seed_list/bluebell.tres" id="1_x67w3"]
+[ext_resource type="PackedScene" uid="uid://dja7dyud48hed" path="res://flowers/varieties/bluebell.tscn" id="2_u06x1"]
+[ext_resource type="Script" uid="uid://jce81fuespel" path="res://resources/seed_data.gd" id="3_kh7xa"]
+
+[resource]
+script = ExtResource("3_kh7xa")
+plantDataResource = ExtResource("1_x67w3")
+plantScene = ExtResource("2_u06x1")
+metadata/_custom_type_script = "uid://jce81fuespel"

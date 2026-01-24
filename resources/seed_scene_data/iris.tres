@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SeedData" load_steps=4 format=3 uid="uid://cocu1fe63lnl7"]
+
+[ext_resource type="Resource" uid="uid://cbpxmsk0tchvg" path="res://resources/seed_list/iris.tres" id="1_ls3a0"]
+[ext_resource type="PackedScene" uid="uid://y3sa6c5udrfh" path="res://flowers/varieties/iris.tscn" id="2_aw0rm"]
+[ext_resource type="Script" uid="uid://jce81fuespel" path="res://resources/seed_data.gd" id="3_dlq2e"]
+
+[resource]
+script = ExtResource("3_dlq2e")
+plantDataResource = ExtResource("1_ls3a0")
+plantScene = ExtResource("2_aw0rm")
+metadata/_custom_type_script = "uid://jce81fuespel"
