@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgtitfouwb423"]
+[gd_scene load_steps=8 format=3 uid="uid://dgtitfouwb423"]
 
 [ext_resource type="Texture2D" uid="uid://eowscnlvf26b" path="res://assets/inventory/Inventory_Slot.png" id="1_8pi4m"]
 [ext_resource type="Texture2D" uid="uid://bw1od7g5dqtt5" path="res://assets/seed bags/bluebell.png" id="2_h113d"]
@@ -9,6 +9,44 @@ font = ExtResource("3_n6sml")
 font_size = 10
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_8pi4m"]
+resource_name = "flash"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/TextureRect/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.827451, 0.13725491, 0.13725491, 1), Color(1, 1, 1, 1), Color(0.827451, 0.13725491, 0.13725491, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_h113d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/TextureRect/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n6sml"]
+_data = {
+&"RESET": SubResource("Animation_h113d"),
+&"flash": SubResource("Animation_8pi4m")
+}
 
 [node name="ItemInfo" type="TextureRect"]
 custom_minimum_size = Vector2(48, 48)
@@ -49,3 +87,8 @@ text = "2"
 label_settings = SubResource("LabelSettings_4rwtj")
 horizontal_alignment = 2
 vertical_alignment = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_n6sml")
+}
