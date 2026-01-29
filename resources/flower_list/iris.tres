@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://8anr3jctbn6f"]
+
+[ext_resource type="Resource" uid="uid://dw8y5d23lrng4" path="res://resources/plant_names/iris.tres" id="1_um3k0"]
+[ext_resource type="Script" uid="uid://bt6nx1rmg6y1w" path="res://resources/plant_data.gd" id="2_pdtf1"]
+[ext_resource type="Texture2D" uid="uid://du402r7xlmio8" path="res://assets/plants/iris.png" id="3_asbqo"]
+
+[resource]
+script = ExtResource("2_pdtf1")
+plantNameResource = ExtResource("1_um3k0")
+texture = ExtResource("3_asbqo")
+metadata/_custom_type_script = "uid://bt6nx1rmg6y1w"

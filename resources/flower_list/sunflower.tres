@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://c0e28ie46hhe0"]
+
+[ext_resource type="Resource" uid="uid://d3xu85pnjos42" path="res://resources/plant_names/sunflower.tres" id="1_kmcr4"]
+[ext_resource type="Script" uid="uid://bt6nx1rmg6y1w" path="res://resources/plant_data.gd" id="2_c51dg"]
+[ext_resource type="Texture2D" uid="uid://pt2wj6lgbdfp" path="res://assets/plants/sunflower.png" id="3_uqrde"]
+
+[resource]
+script = ExtResource("2_c51dg")
+plantNameResource = ExtResource("1_kmcr4")
+texture = ExtResource("3_uqrde")
+metadata/_custom_type_script = "uid://bt6nx1rmg6y1w"

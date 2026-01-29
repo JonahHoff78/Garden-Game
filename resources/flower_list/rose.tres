@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://cbeenswqaq2fa"]
+
+[ext_resource type="Resource" uid="uid://bi5gshxehlet2" path="res://resources/plant_names/rose.tres" id="1_0xwy3"]
+[ext_resource type="Script" uid="uid://bt6nx1rmg6y1w" path="res://resources/plant_data.gd" id="2_uqarg"]
+[ext_resource type="Texture2D" uid="uid://dadd4sk71os3y" path="res://assets/plants/rose.png" id="3_pmfbm"]
+
+[resource]
+script = ExtResource("2_uqarg")
+plantNameResource = ExtResource("1_0xwy3")
+texture = ExtResource("3_pmfbm")
+metadata/_custom_type_script = "uid://bt6nx1rmg6y1w"

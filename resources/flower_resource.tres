@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="FlowerResource" load_steps=11 format=3 uid="uid://dp88dy4dpf3or"]
+
+[ext_resource type="Script" uid="uid://bt6nx1rmg6y1w" path="res://resources/plant_data.gd" id="1_jei37"]
+[ext_resource type="Resource" uid="uid://bkimp7qxtiivf" path="res://resources/flower_list/bluebell.tres" id="2_hri5u"]
+[ext_resource type="Resource" uid="uid://b5bv8evy835ny" path="res://resources/flower_list/daisy.tres" id="3_2jmvg"]
+[ext_resource type="Resource" uid="uid://8anr3jctbn6f" path="res://resources/flower_list/iris.tres" id="4_1uj8b"]
+[ext_resource type="Resource" uid="uid://d2obs8hgds7jk" path="res://resources/flower_list/lotus.tres" id="5_vl34b"]
+[ext_resource type="Resource" uid="uid://civvshw8nn155" path="res://resources/flower_list/pansy.tres" id="6_kt8xd"]
+[ext_resource type="Resource" uid="uid://cbeenswqaq2fa" path="res://resources/flower_list/rose.tres" id="7_relnb"]
+[ext_resource type="Resource" uid="uid://c0e28ie46hhe0" path="res://resources/flower_list/sunflower.tres" id="8_8lhg5"]
+[ext_resource type="Resource" uid="uid://p2l6brv335f8" path="res://resources/flower_list/tulip.tres" id="9_y8cbq"]
+[ext_resource type="Script" uid="uid://c478521mticmv" path="res://resources/flowerResource.gd" id="10_wav7k"]
+
+[resource]
+script = ExtResource("10_wav7k")
+flowerList = Array[ExtResource("1_jei37")]([ExtResource("2_hri5u"), ExtResource("3_2jmvg"), ExtResource("4_1uj8b"), ExtResource("5_vl34b"), ExtResource("6_kt8xd"), ExtResource("7_relnb"), ExtResource("8_8lhg5"), ExtResource("9_y8cbq")])
+metadata/_custom_type_script = "uid://c478521mticmv"
