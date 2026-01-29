@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgtitfouwb423"]
+
+[ext_resource type="Texture2D" uid="uid://eowscnlvf26b" path="res://assets/inventory/Inventory_Slot.png" id="1_8pi4m"]
+[ext_resource type="Texture2D" uid="uid://bw1od7g5dqtt5" path="res://assets/seed bags/bluebell.png" id="2_h113d"]
+[ext_resource type="FontFile" uid="uid://dxyg3k7yrrci6" path="res://assets/font/kenvector_future_thin.ttf" id="3_n6sml"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4rwtj"]
+font = ExtResource("3_n6sml")
+font_size = 10
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ItemInfo" type="TextureRect"]
+custom_minimum_size = Vector2(48, 48)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_8pi4m")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 9
+theme_override_constants/margin_bottom = 9
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_h113d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "2"
+label_settings = SubResource("LabelSettings_4rwtj")
+horizontal_alignment = 2
+vertical_alignment = 2
