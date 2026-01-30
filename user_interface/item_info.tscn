@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dgtitfouwb423"]
+[gd_scene load_steps=8 format=3 uid="uid://dgtitfouwb423"]
 
 [ext_resource type="Texture2D" uid="uid://eowscnlvf26b" path="res://assets/inventory/Inventory_Slot.png" id="1_8pi4m"]
-[ext_resource type="Texture2D" uid="uid://bw1od7g5dqtt5" path="res://assets/seed bags/bluebell.png" id="2_h113d"]
 [ext_resource type="Script" uid="uid://dkvj5eh7l5pyt" path="res://item_info.gd" id="2_my4vu"]
 [ext_resource type="FontFile" uid="uid://dxyg3k7yrrci6" path="res://assets/font/kenvector_future_thin.ttf" id="3_n6sml"]
 
@@ -70,7 +69,6 @@ theme_override_constants/margin_bottom = 9
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
-texture = ExtResource("2_h113d")
 expand_mode = 1
 stretch_mode = 5
 
@@ -85,7 +83,6 @@ offset_left = -12.0
 offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "2"
 label_settings = SubResource("LabelSettings_4rwtj")
 horizontal_alignment = 2
 vertical_alignment = 2
