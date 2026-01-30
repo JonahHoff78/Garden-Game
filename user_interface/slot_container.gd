@@ -6,7 +6,9 @@ signal slot_selected(slot_pos)
 
 var seedDataResource: SeedData
 
-
+func setup(value):
+	seedDataResource = value
+	seedDataResource.quantity_changed.connect(_on_quantity_changed)
 
 
 func _on_texture_button_button_down() -> void:
@@ -16,4 +18,5 @@ func _on_texture_button_button_down() -> void:
 func update_quantity() -> void:
 	itemInfo.set_label(seedDataResource.get_quantity())
 	
-	
+func _on_quantity_changed(new_quantity) -> void:
+	itemInfo.set_label(new_quantity)
