@@ -26,10 +26,8 @@ theme_override_constants/margin_bottom = 11
 [node name="GridContainer" type="GridContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="SlotContainer" parent="MarginContainer/GridContainer" instance=ExtResource("2_j1htc")]
-layout_mode = 2
-
 [node name="SelectorTexture" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("3_xmn4o")
 stretch_mode = 4

@@ -19,7 +19,7 @@ func _on_slot_selected(value) -> void:
 	change_selected_slot(value)
 	
 func change_selected_slot(slot_pos) -> void:
-	selector_texture.position.x = slot_pos.x
+	selector_texture.position.x = slot_pos.x + $MarginContainer.get_theme_constant("margin_left")
 
 func instance_slot(seedData: SeedData) -> void:
 	var slot = slotScene.instantiate()
