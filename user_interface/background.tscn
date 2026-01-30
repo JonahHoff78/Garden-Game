@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b281qnpnwxk6a"]
+
+[ext_resource type="Texture2D" uid="uid://c2hrxgyxs1btj" path="res://assets/inventory/Inventory_background.png" id="1_m6ukh"]
+
+[node name="Background" type="NinePatchRect"]
+texture = ExtResource("1_m6ukh")
+patch_margin_left = 11
+patch_margin_top = 11
+patch_margin_right = 11
+patch_margin_bottom = 11
