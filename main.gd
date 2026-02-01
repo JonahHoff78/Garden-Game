@@ -8,6 +8,7 @@ var plantedFlowers: Dictionary = {}
 
 func _ready():
 	Global.seed_changed.connect(_on_seed_changed)
+	
 
 func _physics_process(_delta):
 	var playerMapCoord = local_to_map(player.global_position)
@@ -26,6 +27,7 @@ func _on_player_plant_seed():
 	
 	if tile.get_custom_data("garden"):
 		if not plantedFlowers.has(cellLocalCoord):
+			currentSeed.subtract_quantity()
 			plant_seed(cellLocalCoord)
 		elif is_harvestable(cellLocalCoord):
 			harvest_plant(cellLocalCoord)

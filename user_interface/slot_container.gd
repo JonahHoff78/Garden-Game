@@ -13,7 +13,7 @@ func setup(value):
 
 
 func _on_texture_button_button_down():
-	if seedDataResource.seed_left(): Global.emit_signal("seed_changed", seedDataResource)
+	if seedDataResource != null and seedDataResource.seed_left(): Global.emit_signal("seed_changed", seedDataResource)
 	emit_signal("slot_selected", position)
 	
 func update_quantity() -> void:

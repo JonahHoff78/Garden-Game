@@ -7,7 +7,7 @@ extends PanelContainer
 @onready var selector_texture = $MarginContainer/SelectorTexture
 @onready var grid_container = $MarginContainer/GridContainer
 
-func _ready():
+func initialize():
 	grid_container.columns = seedResource.get_size()
 	add_new_slot(seedResource.get_seed_list())
 	
