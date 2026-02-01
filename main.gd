@@ -3,8 +3,11 @@ extends TileMap
 @onready var player: CharacterBody2D = $World/Player
 @onready var grid_helper: Sprite2D = $World/GridHelper
 
-var currentSeed = preload("res://flowers/varieties/rose.tscn")
+var currentSeed = SeedData
 var plantedFlowers: Dictionary = {}
+
+func _ready():
+	Global.seed_changed.connect(_on_seed_changed)
 
 func _physics_process(_delta):
 	var playerMapCoord = local_to_map(player.global_position)
@@ -39,8 +42,12 @@ func is_harvestable(key) -> bool:
 	return data.harvest_ready if data != null else false
 		
 func plant_seed(coord) -> void:
-	var plant = currentSeed.instantiate()
+	var plant = currentSeed.plantScene.instantiate()
 	get_node("World/Flowers").add_child(plant)
 	plantedFlowers[coord] = plant
 	plant.global_position = map_to_local(coord)
+	
+func _on_seed_changed(new_seed) -> void:
+	currentSeed = new_seed
+	
 		
