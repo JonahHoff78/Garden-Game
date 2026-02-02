@@ -21,3 +21,7 @@ func update_quantity() -> void:
 	
 func _on_quantity_changed(new_quantity) -> void:
 	itemInfo.set_label(new_quantity)
+
+
+func play_slot_item_empty() -> void:
+	$ItemInfo.play_flash_animation()

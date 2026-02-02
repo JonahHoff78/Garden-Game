@@ -3,11 +3,12 @@ extends TileMap
 @onready var player: CharacterBody2D = $World/Player
 @onready var grid_helper: Sprite2D = $World/GridHelper
 
-var currentSeed = SeedData
+var currentSeed: SeedData
 var plantedFlowers: Dictionary = {}
 
 func _ready():
 	Global.seed_changed.connect(_on_seed_changed)
+	$HUD.setup_inventory()
 	
 
 func _physics_process(_delta):
@@ -26,7 +27,7 @@ func _on_player_plant_seed():
 		return
 	
 	if tile.get_custom_data("garden"):
-		if not plantedFlowers.has(cellLocalCoord):
+		if not plantedFlowers.has(cellLocalCoord) and currentSeed.seed_left():
 			currentSeed.subtract_quantity()
 			plant_seed(cellLocalCoord)
 		elif is_harvestable(cellLocalCoord):

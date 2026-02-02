@@ -31,3 +31,9 @@ func instance_slot(seedData: SeedData) -> void:
 	grid_container.add_child(slot)
 	slot.connect("slot_selected", _on_slot_selected)
 	slot.setup(seedData)
+	
+
+func is_slot_empty(seedData: SeedData) -> void:
+	for child in grid_container.get_children():
+		if child.seedDataResource == seedData:
+			child.play_slot_item_empty()
