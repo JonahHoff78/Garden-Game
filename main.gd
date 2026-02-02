@@ -27,9 +27,12 @@ func _on_player_plant_seed():
 		return
 	
 	if tile.get_custom_data("garden"):
-		if not plantedFlowers.has(cellLocalCoord) and currentSeed.seed_left():
-			currentSeed.subtract_quantity()
-			plant_seed(cellLocalCoord)
+		if not plantedFlowers.has(cellLocalCoord):
+			if currentSeed.seed_left():
+				currentSeed.subtract_quantity()
+				plant_seed(cellLocalCoord)
+			else:
+				$HUD.inventory_slot_empty(currentSeed)
 		elif is_harvestable(cellLocalCoord):
 			harvest_plant(cellLocalCoord)
 			
