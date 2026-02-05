@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cchmko4gacnux"]
+[gd_scene load_steps=6 format=3 uid="uid://cchmko4gacnux"]
 
 [ext_resource type="PackedScene" uid="uid://b281qnpnwxk6a" path="res://user_interface/background.tscn" id="1_2j8nw"]
+[ext_resource type="Script" uid="uid://drxys4y80l52e" path="res://Shop/station_container.gd" id="2_b6uf4"]
+[ext_resource type="PackedScene" uid="uid://bl8p1t6t7xqj4" path="res://Shop/seed_extractor.tscn" id="3_64x70"]
+[ext_resource type="Resource" uid="uid://dp88dy4dpf3or" path="res://resources/flower_resource.tres" id="4_vt4tx"]
+[ext_resource type="Resource" uid="uid://b2ho7jnngjd5y" path="res://resources/seed_resource.tres" id="5_7aaf7"]
 
 [node name="FlouristShop" type="Control"]
 layout_mode = 3
@@ -43,3 +47,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 10
+script = ExtResource("2_b6uf4")
+seedExtractorScene = ExtResource("3_64x70")
+flowerResource = ExtResource("4_vt4tx")
+seedResource = ExtResource("5_7aaf7")
