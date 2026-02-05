@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://bl8p1t6t7xqj4"]
+
+[ext_resource type="PackedScene" uid="uid://dgtitfouwb423" path="res://user_interface/item_info.tscn" id="1_j1b3l"]
+[ext_resource type="Texture2D" uid="uid://bga4lxpiiue4r" path="res://assets/others/arrowRight.png" id="2_f7whq"]
+[ext_resource type="Texture2D" uid="uid://bhmauwyu0w5gh" path="res://assets/others/button_normal.png" id="3_duoku"]
+[ext_resource type="Texture2D" uid="uid://gpushcu070tw" path="res://assets/others/button_pressed.png" id="4_33cks"]
+[ext_resource type="FontFile" uid="uid://dxyg3k7yrrci6" path="res://assets/font/kenvector_future_thin.ttf" id="5_d6i6w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wnl23"]
+font = ExtResource("5_d6i6w")
+
+[node name="SeedExtractor" type="HBoxContainer"]
+offset_right = 258.0
+offset_bottom = 48.0
+
+[node name="PlantInfo1" parent="." instance=ExtResource("1_j1b3l")]
+layout_mode = 2
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_f7whq")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="PlantInfo2" parent="." instance=ExtResource("1_j1b3l")]
+layout_mode = 2
+stretch_mode = 4
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("3_duoku")
+texture_pressed = ExtResource("4_33cks")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Claim"
+label_settings = SubResource("LabelSettings_wnl23")
+horizontal_alignment = 1
+vertical_alignment = 1
