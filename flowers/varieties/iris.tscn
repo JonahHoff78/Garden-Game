@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://y3sa6c5udrfh"]
+[gd_scene load_steps=10 format=3 uid="uid://y3sa6c5udrfh"]
 
 [ext_resource type="PackedScene" uid="uid://bhbwolfj0lsos" path="res://flowers/flower_base.tscn" id="1_34ieu"]
 [ext_resource type="Texture2D" uid="uid://l36081rbdc35" path="res://assets/flowers/objects.png" id="2_6qqwt"]
+[ext_resource type="Resource" uid="uid://8anr3jctbn6f" path="res://resources/flower_list/iris.tres" id="2_t1wnv"]
 
 [sub_resource type="Animation" id="Animation_t1wnv"]
 resource_name = "0"
@@ -126,45 +127,6 @@ tracks/2/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_aaope"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Rect2(96, 48, 16, 16)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -9)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:harvest_ready")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="Animation" id="Animation_o7xhc"]
 resource_name = "3"
 tracks/0/type = "value"
@@ -204,6 +166,45 @@ tracks/2/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_aaope"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(96, 48, 16, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -9)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:harvest_ready")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jxx18"]
 _data = {
 &"0": SubResource("Animation_t1wnv"),
@@ -214,6 +215,7 @@ _data = {
 }
 
 [node name="iris" instance=ExtResource("1_34ieu")]
+plantItem = ExtResource("2_t1wnv")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, -9)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dycxcxhugoe3d"]
+[gd_scene load_steps=10 format=3 uid="uid://dycxcxhugoe3d"]
 
 [ext_resource type="PackedScene" uid="uid://bhbwolfj0lsos" path="res://flowers/flower_base.tscn" id="1_7ci02"]
 [ext_resource type="Texture2D" uid="uid://l36081rbdc35" path="res://assets/flowers/objects.png" id="2_bxq4y"]
+[ext_resource type="Resource" uid="uid://cbeenswqaq2fa" path="res://resources/flower_list/rose.tres" id="2_v3bc4"]
 
 [sub_resource type="Animation" id="Animation_v3bc4"]
 resource_name = "0"
@@ -218,6 +219,7 @@ _data = {
 }
 
 [node name="rose" instance=ExtResource("1_7ci02")]
+plantItem = ExtResource("2_v3bc4")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, -9)

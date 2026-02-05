@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://vla1xnboh58m"]
+[gd_scene load_steps=10 format=3 uid="uid://vla1xnboh58m"]
 
 [ext_resource type="PackedScene" uid="uid://bhbwolfj0lsos" path="res://flowers/flower_base.tscn" id="1_m3o2u"]
 [ext_resource type="Texture2D" uid="uid://l36081rbdc35" path="res://assets/flowers/objects.png" id="2_8df8m"]
+[ext_resource type="Resource" uid="uid://c0e28ie46hhe0" path="res://resources/flower_list/sunflower.tres" id="2_hrpwv"]
 
 [sub_resource type="Animation" id="Animation_t38nr"]
 resource_name = "0"
@@ -218,6 +219,7 @@ _data = {
 }
 
 [node name="sunflower" instance=ExtResource("1_m3o2u")]
+plantItem = ExtResource("2_hrpwv")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, -9)
