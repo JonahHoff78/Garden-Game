@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bityx70aetlnn"]
+[gd_scene load_steps=4 format=3 uid="uid://bityx70aetlnn"]
 
 [ext_resource type="PackedScene" uid="uid://m0kppensjc2i" path="res://user_interface/inventory.tscn" id="1_ovsw5"]
 [ext_resource type="Script" uid="uid://cw7fa157rfsvq" path="res://user_interface/hud.gd" id="1_p08i1"]
+[ext_resource type="PackedScene" uid="uid://cchmko4gacnux" path="res://Shop/flourist_shop.tscn" id="3_kaf76"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_p08i1")
+
+[node name="FlouristShop" parent="." instance=ExtResource("3_kaf76")]
 
 [node name="Inventory" parent="." instance=ExtResource("1_ovsw5")]
 anchors_preset = 7

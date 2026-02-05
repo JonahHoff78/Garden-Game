@@ -8,4 +8,5 @@
 script = ExtResource("2_3bc12")
 plantNameResource = ExtResource("1_uj4gq")
 texture = ExtResource("3_6t50f")
+quantity = 1
 metadata/_custom_type_script = "uid://bt6nx1rmg6y1w"
