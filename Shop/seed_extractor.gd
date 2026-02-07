@@ -8,7 +8,9 @@ func initialize(plant: PlantData, seedData: SeedData) -> void:
 	seedItem = seedData
 	update_item_containers()
 	
-
+func update_slots() -> void:
+	$PlantInfo1.set_label(plantItem.quantity)
+	$PlantInfo2.set_label(seedItem.get_quantity())
 
 
 func update_item_containers() -> void:

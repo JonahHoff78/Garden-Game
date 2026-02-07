@@ -20,3 +20,7 @@ func instance_conversion_scene(value1, value2) -> void:
 	var scene = seedExtractorScene.instantiate()
 	add_child(scene)
 	scene.initialize(value1, value2)
+	
+func update_seed_quantity() -> void:
+	for child in get_children():
+		child.update_slots()
