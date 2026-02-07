@@ -25,3 +25,11 @@ func setup_inventory() -> void:
 	
 func inventory_slot_empty(seed) -> void:
 	$Inventory.is_slot_empty(seed)
+
+
+func _on_texture_button_button_down():
+	pass # Replace with function body.
+	
+	
+	
+
