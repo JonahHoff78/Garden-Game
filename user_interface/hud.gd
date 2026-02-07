@@ -38,7 +38,13 @@ func _on_texture_button_button_down():
 		var tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
 		tween.tween_callback(update_ui.bind(true))
 		tween.tween_property(flourist_shop, "scale", Vector2(1,1), 0.25)
-	
+	else:
+		var tween = create_tween().set_ease(Tween.EASE_OUT)
+		tween.tween_property(flourist_shop, "scale", Vector2.ZERO, 0.25)
+		tween.tween_callback(update_ui.bind(false))
+		inventory_hidden = false
+		toggle_inventory_ui()
+		
 	
 	
 

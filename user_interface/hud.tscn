@@ -11,6 +11,7 @@ script = ExtResource("1_p08i1")
 
 [node name="FlouristShop" parent="." instance=ExtResource("3_kaf76")]
 visible = false
+pivot_offset = Vector2(288, 162)
 
 [node name="Inventory" parent="." instance=ExtResource("1_ovsw5")]
 anchors_preset = 7
