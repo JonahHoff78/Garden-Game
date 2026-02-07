@@ -21,14 +21,23 @@ func toggle_inventory_ui() -> void:
 	)
 
 func setup_inventory() -> void:
-	$Inventory.initialize()
+	inventory.initialize()
 	
 func inventory_slot_empty(seed) -> void:
-	$Inventory.is_slot_empty(seed)
+	inventory.is_slot_empty(seed)
+	
+	
+func update_ui(value) -> void:
+	flourist_shop.visible = value
+	inventory.visible = not value
 
 
 func _on_texture_button_button_down():
-	pass # Replace with function body.
+	if not flourist_shop.visible:
+		flourist_shop.scale = Vector2.ZERO
+		var tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
+		tween.tween_callback(update_ui.bind(true))
+		tween.tween_property(flourist_shop, "scale", Vector2(1,1), 0.25)
 	
 	
 	
