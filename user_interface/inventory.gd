@@ -19,6 +19,10 @@ func add_new_slot(seedArray: Array[SeedData]) -> void:
 	Global.emit_signal("seed_changed", firstSlot.seedDataResource)
 	change_selected_slot(firstSlot.position)
 	
+func update_inventory() -> void:
+	for child in grid_container.get_children():
+		child.update_quantity()
+	
 		
 func _on_slot_selected(value) -> void:
 	change_selected_slot(value)

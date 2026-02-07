@@ -16,5 +16,5 @@ func _on_timer_timeout():
 
 
 func harvest() -> void:
-	plantItem.quantity += amount
+	plantItem.quantity += 1
 	queue_free()

@@ -35,12 +35,13 @@ func update_ui(value) -> void:
 func _on_texture_button_button_down():
 	if not flourist_shop.visible:
 		Global.update_station.emit()
-		flourist_shop.get_node("Background/MarginContainer/ScrollContainer/StationContainer").update_plant_seed_quantity()
+		flourist_shop.get_node("Background/MarginContainer/ScrollContainer/StationContainer").update_seed_quantity()
 		flourist_shop.scale = Vector2.ZERO
 		var tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
 		tween.tween_callback(update_ui.bind(true))
 		tween.tween_property(flourist_shop, "scale", Vector2(1,1), 0.25)
 	else:
+		inventory.update_inventory()
 		var tween = create_tween().set_ease(Tween.EASE_OUT)
 		tween.tween_property(flourist_shop, "scale", Vector2.ZERO, 0.25)
 		tween.tween_callback(update_ui.bind(false))
